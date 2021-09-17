@@ -1,0 +1,71 @@
+{
+  "by_name": {
+    "$list-color": {
+      "name": "$list-color",
+      "value": "$text",
+      "type": "variable",
+      "computed_type": "color",
+      "computed_value": "hsl(0, 0%, 29%)"
+    },
+    "$list-item-description-color": {
+      "name": "$list-item-description-color",
+      "value": "$text-light",
+      "type": "variable",
+      "computed_type": "color",
+      "computed_value": "hsl(0, 0%, 48%)"
+    },
+    "$list-item-divider-color": {
+      "name": "$list-item-divider-color",
+      "value": "$border",
+      "type": "variable",
+      "computed_type": "color",
+      "computed_value": "hsl(0, 0%, 86%)"
+    },
+    "$list-item-hover-color": {
+      "name": "$list-item-hover-color",
+      "value": "$light",
+      "type": "variable",
+      "computed_type": "color",
+      "computed_value": "hsl(0, 0%, 96%)"
+    },
+    "$list-item-image-margin": {
+      "name": "$list-item-image-margin",
+      "value": "0.75em",
+      "type": "size",
+      "computed_type": "",
+      "computed_value": ""
+    },
+    "$list-item-padding": {
+      "name": "$list-item-padding",
+      "value": "0.75em 0",
+      "type": "size",
+      "computed_type": "",
+      "computed_value": ""
+    },
+    "$list-item-title-color": {
+      "name": "$list-item-title-color",
+      "value": "$text-strong",
+      "type": "variable",
+      "computed_type": "color",
+      "computed_value": "hsl(0, 0%, 21%)"
+    },
+    "$list-item-title-weight": {
+      "name": "$list-item-title-weight",
+      "value": "$weight-semibold",
+      "type": "variable",
+      "computed_type": "font-weight",
+      "computed_value": "500"
+    }
+  },
+  "list": [
+    "$list-color",
+    "$list-item-description-color",
+    "$list-item-divider-color",
+    "$list-item-hover-color",
+    "$list-item-image-margin",
+    "$list-item-padding",
+    "$list-item-title-color",
+    "$list-item-title-weight"
+  ],
+  "file_path": "bulma-list.sass"
+}

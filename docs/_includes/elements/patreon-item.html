@@ -1,0 +1,17 @@
+<li>
+  <p>{{ include.backer.name }}</p>
+
+  {% if include.backer.twitter != "" %}
+    <a class="icon-text bd-is-twitter" href="https://twitter.com/{{ include.backer.twitter }}" target="_blank" rel="nofollow">
+      <span class="icon"><i class="fab fa-twitter"></i></span>
+      <span>{{ include.backer.twitter }}</span>
+    </a>
+  {% endif %}
+
+  {% if include.backer.discord != "" %}
+    <span class="icon-text bd-is-discord">
+      <span class="icon"><i class="fab fa-discord"></i></span>
+      <span>{{ include.backer.discord }}</span>
+    </span>
+  {% endif %}
+</li>

@@ -1,0 +1,67 @@
+@import "../../node_modules/bulma/sass/utilities/mixins.sass";
+
+$list-color: $text !default
+$list-item-description-color: $text-light !default
+$list-item-divider-color: $border !default
+$list-item-hover-color: $light !default
+$list-item-image-margin: 0.75em !default
+$list-item-padding: 0.75em 0.5em !default
+$list-item-title-color: $text-strong !default
+$list-item-title-weight: $weight-semibold !default
+
+=has-mouse-pointer
+  @media (hover: hover)
+    @content
+
+.list
+  color: $list-color
+  display: flex
+  flex-direction: column
+  &.has-hidden-images .list-item-image
+    display: none
+  &.has-hoverable-list-items .list-item:hover
+    background-color: $list-item-hover-color
+  &.has-overflow-ellipsis .list-item-content
+    min-width: 0
+    & > *
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+  &:not(.has-visible-pointer-controls) .list-item-controls
+    +has-mouse-pointer
+      opacity: 0
+      visibility: hidden
+
+.list-item
+  align-items: center
+  display: flex
+  transition: background-color ease-out 0.125s
+  &:hover .list-item-controls,
+  &:focus-within .list-item-controls
+    +has-mouse-pointer
+      opacity: initial
+      visibility: initial
+  &:not(.box)
+    padding: $list-item-padding
+  &:not(:last-child):not(.box)
+    border-bottom: 1px solid $list-item-divider-color
+
+.list-item-image
+  margin-right: $list-item-image-margin
+
+.list-item-content
+  display: flex
+  flex-direction: column
+  flex-grow: 1;
+
+.list-item-title
+  color: $list-item-title-color
+  font-weight: $list-item-title-weight
+
+.list-item-description
+  color: $list-item-description-color
+
+.list-item-controls
+  flex-shrink: 0
+  padding-left: 1rem
+  transition: opacity ease-out 0.125s

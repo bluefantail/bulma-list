@@ -1,0 +1,519 @@
+---
+title: Bulma list
+subtitle: A very simple list component extension for [Bulma](https://bulma.io){:target="_blank"}
+layout: documentation
+doc-tab: components
+doc-subtab: bulma-list
+route: index
+meta:
+  colors: false
+  sizes: false
+  variables: true
+---
+
+{% capture list_example %}
+<div class="list">
+  <div class="list-item">
+    <div class="list-item-title">List item</div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-title">List item</div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_image_example %}
+<div class="list">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_controls_example %}
+<div class="list">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_visible_controls %}
+<div class="list has-visible-pointer-controls">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+
+    <div class="list-item-controls">
+      <div class="buttons is-right">
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-edit"></i>
+          </span>
+          <span>Edit</span>
+        </button>
+
+        <button class="button">
+          <span class="icon is-small">
+            <i class="fas fa-ellipsis-h"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_hoverable %}
+<div class="list has-hoverable-list-items">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_overflow_ellipsis %}
+<div class="list has-overflow-ellipsis">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">Very long titles will also have overflow hidden if they are wider than the container</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_hidden_images %}
+<div class="list has-hidden-images">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture list_item_with_box %}
+<div class="list">
+  <div class="list-item box">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item box">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+
+  <div class="list-item box">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">List item description</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+<div class="content">
+  <p>
+    The <code>list</code> component is a simple vertical pattern for displaying data related to a single topic.
+  </p>
+
+  <p>It can be kept very simple with only text content.</p>
+</div>
+
+{% include elements/snippet.html content=list_example %}
+
+{% include elements/anchor.html name="List item with image" %}
+
+<div class="content">
+  <p>
+    The <code>list-item</code> can have an image inside the <code>list-item-image</code> container
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_image_example more=true %}
+
+{% include elements/anchor.html name="List item with controls" %}
+
+<div class="content">
+  <p>
+    List item's can also have optional UI controls inside the <code>list-item-controls</code> container.
+  </p>
+
+  <p>
+    By default, list item controls will only show when hovered on devices with pointers, but will always be visible on touch devices.
+  </p>
+
+  <p>
+    Controls remain in focus using when any of the list item's children are in focus meaning dropdowns can also be used inside list items.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_controls_example more=true %}
+
+{% include elements/anchor.html name="Modifiers" %}
+
+<div class="content">
+  <p>
+    If you want a list item's controls to be <strong>visible</strong> all the time, the <code>has-visible-pointer-controls</code> modifier can be used.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_visible_controls more=true %}
+
+<div class="content">
+  <p>
+    To add a <strong>hover effect</strong> on each list item use the <code>has-hoverable-list-items</code> modifier.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_hoverable more=true %}
+
+<div class="content">
+  <p>
+    To stop text from wrapping and add an <strong>ellipsis overflow</strong> effect use <code>has-overflow-ellipsis</code>.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_overflow_ellipsis more=true %}
+
+<div class="content">
+  <p>
+    Sometimes you might want to have <strong>images hidden</strong> by default when the page first loads for using with list display type toggles. You can use <code>has-hidden-images</code> for this.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_hidden_images more=true %}
+
+
+{% include elements/anchor.html name="Combinations" %}
+
+<div class="content">
+  <p>
+    <code>list-item</code> can be used with <code>box</code> for a box-style list.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_with_box more=true %}
+
+{% include components/variables.html type='component' %}

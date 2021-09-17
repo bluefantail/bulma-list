@@ -1,0 +1,14 @@
+{
+  "name": "bulma-list",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Fannin",
+    "email": "hello@mattfannin.nz",
+    "url": "https://mattfannin.nz"
+  },
+  "description": "A very simple list component extension for Bulma",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.3"
+  }
+}
