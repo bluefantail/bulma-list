@@ -8,7 +8,7 @@
   },
   "description": "A very simple list component extension for Bulma",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "bulma": "^0.9.3"
   }
 }
