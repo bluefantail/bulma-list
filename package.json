@@ -9,6 +9,14 @@
   "description": "A very simple list component extension for Bulma",
   "license": "MIT",
   "devDependencies": {
-    "bulma": "^0.9.3"
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "bulma": "^0.9.3",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.41.1"
+  },
+  "scripts": {
+    "build": "parcel build sass/bulma-list.sass --dist-dir css",
+    "build-docs": "parcel build sass/bulma-list.sass --dist-dir docs/css",
+    "start-docs": "parcel watch sass/bulma-list.sass --dist-dir docs/css"
   }
 }
