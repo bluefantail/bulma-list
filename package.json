@@ -7,7 +7,30 @@
     "url": "https://mattfannin.nz"
   },
   "description": "A very simple list component extension for Bulma",
+  "repository": {
+    "url": "https://github.com/bluefantail/bulma-list",
+    "type": "git"
+  },
   "license": "MIT",
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "bulma.io",
+    "extensions",
+    "extension",
+    "list",
+    "date picker"
+  ],
+  "bugs": {
+    "url": "https://github.com/bluefantail/bulma-list/issues"
+  },
+  "homepage": "https://bluefantail.github.io/bulma-list",
+  "files": [
+    "css",
+    "sass",
+    "LICENSE",
+    "README.md"
+  ],
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "bulma": "^0.9.3",
