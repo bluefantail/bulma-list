@@ -1,4 +1,6 @@
-yarn-error.log
+.DS_Store
 .jekyll-cache
 .parcel-cache
+yarn-error.log
+
 node_modules
