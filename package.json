@@ -18,8 +18,7 @@
     "bulma.io",
     "extensions",
     "extension",
-    "list",
-    "date picker"
+    "list"
   ],
   "bugs": {
     "url": "https://github.com/bluefantail/bulma-list/issues"
