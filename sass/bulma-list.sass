@@ -45,14 +45,21 @@ $list-item-title-weight: $weight-semibold !default
     padding: $list-item-padding
   &:not(:last-child):not(.box)
     border-bottom: 1px solid $list-item-divider-color
+  +mobile
+    flex-wrap: wrap
 
 .list-item-image
+  flex-shrink: 0
   margin-right: $list-item-image-margin
+  +mobile
+    padding: 0.5rem 0
 
 .list-item-content
   display: flex
   flex-direction: column
   flex-grow: 1
+  +mobile
+    padding: 0.5rem 0
 
 .list-item-title
   color: $list-item-title-color
@@ -63,5 +70,9 @@ $list-item-title-weight: $weight-semibold !default
 
 .list-item-controls
   flex-shrink: 0
-  padding-left: 1rem
   transition: opacity ease-out 0.125s
+  +mobile
+    padding: 0.5rem 0
+    flex-wrap: wrap
+  +tablet
+    padding-left: 1rem
