@@ -3,9 +3,9 @@
 $list-color: $text !default
 $list-item-description-color: $text-light !default
 $list-item-divider-color: $border !default
-$list-item-hover-color: $light !default
+$list-item-hover-color: $scheme-main-bis !default
 $list-item-image-margin: 0.75em !default
-$list-item-padding: 0.75em 0.5em !default
+$list-item-padding: 0.75em 0.75em !default
 $list-item-title-color: $text-strong !default
 $list-item-title-weight: $weight-semibold !default
 
@@ -35,6 +35,7 @@ $list-item-title-weight: $weight-semibold !default
 .list-item
   align-items: center
   display: flex
+  position: relative
   transition: background-color ease-out 0.125s
   &:hover .list-item-controls,
   &:focus-within .list-item-controls
@@ -46,7 +47,8 @@ $list-item-title-weight: $weight-semibold !default
   &:not(:last-child):not(.box)
     border-bottom: 1px solid $list-item-divider-color
   +mobile
-    flex-wrap: wrap
+    .list:not(.has-overflow-ellipsis) &
+      flex-wrap: wrap
 
 .list-item-image
   flex-shrink: 0
@@ -76,3 +78,9 @@ $list-item-title-weight: $weight-semibold !default
     flex-wrap: wrap
   +tablet
     padding-left: 1rem
+    .list:not(.has-visible-pointer-controls) &
+      align-items: center
+      display: flex
+      height: 100%
+      position: absolute
+      right: 0

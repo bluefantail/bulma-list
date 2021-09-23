@@ -5,7 +5,7 @@ The list component is a simple vertical pattern for displaying data related to a
 
 ![image](https://user-images.githubusercontent.com/616368/133979030-296bea89-0537-40c9-82cd-93252eb81671.png)
 
-[View demo & docs](https://bluefantail.github.io/bulma-list/)
+[Documentation & examples](https://bluefantail.github.io/bulma-list/)
 
 ## Installation
 
@@ -25,7 +25,7 @@ This puts both the compiled css and the raw sass into the `node_modules` folder.
 
 Depending on your needs you can then import either `bulma-list.css` or `bulma-list.sass` into your project after Bulma itself.
 
-## Demo & documentation
+## Documentation & examples
 The documentation is built using a copy of Bulma's own Jekyll based system to keep as close as possible to the official style.
 
-[View demo & docs](https://bluefantail.github.io/bulma-list/)
+[Documentation & examples](https://bluefantail.github.io/bulma-list/)
