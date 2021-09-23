@@ -46,7 +46,8 @@ $list-item-title-weight: $weight-semibold !default
   &:not(:last-child):not(.box)
     border-bottom: 1px solid $list-item-divider-color
   +mobile
-    flex-wrap: wrap
+    .list:not(.has-overflow-ellipsis) &
+      flex-wrap: wrap
 
 .list-item-image
   flex-shrink: 0
