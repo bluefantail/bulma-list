@@ -35,6 +35,7 @@ $list-item-title-weight: $weight-semibold !default
 .list-item
   align-items: center
   display: flex
+  position: relative
   transition: background-color ease-out 0.125s
   &:hover .list-item-controls,
   &:focus-within .list-item-controls
@@ -77,3 +78,9 @@ $list-item-title-weight: $weight-semibold !default
     flex-wrap: wrap
   +tablet
     padding-left: 1rem
+    .list:not(.has-visible-pointer-controls) &
+      align-items: center
+      display: flex
+      height: 100%
+      position: absolute
+      right: 0
