@@ -23,10 +23,10 @@
     },
     "$list-item-hover-color": {
       "name": "$list-item-hover-color",
-      "value": "$light",
+      "value": "$scheme-main-bis",
       "type": "variable",
       "computed_type": "color",
-      "computed_value": "hsl(0, 0%, 96%)"
+      "computed_value": "hsl(0, 0%, 98%)"
     },
     "$list-item-image-margin": {
       "name": "$list-item-image-margin",
@@ -37,7 +37,7 @@
     },
     "$list-item-padding": {
       "name": "$list-item-padding",
-      "value": "0.75em 0",
+      "value": "0.75em",
       "type": "size",
       "computed_type": "",
       "computed_value": ""
