@@ -3,7 +3,7 @@ A simple list component extension for [Bulma](https://bulma.io).
 
 The list component is a simple vertical pattern for displaying data related to a single topic. Inspired by similair patterns in [Ant](https://ant.design/components/list), [Material](https://material.io/components/lists), and [Ionic](https://ionicframework.com/docs/api/list).
 
-![image](https://user-images.githubusercontent.com/616368/133979030-296bea89-0537-40c9-82cd-93252eb81671.png)
+![bulma-list examples (1)](https://user-images.githubusercontent.com/616368/134605482-de606607-b488-4e2d-b717-0cfe10d22521.png)
 
 [Documentation & examples](https://bluefantail.github.io/bulma-list/)
 
