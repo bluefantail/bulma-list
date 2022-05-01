@@ -347,6 +347,49 @@ meta:
 </div>
 {% endcapture %}
 
+{% capture list_item_overflow_ellipsis_length %}
+<div class="list has-overflow-ellipsis" style="--length: 25">
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">List item</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+
+  <div class="list-item">
+    <div class="list-item-image">
+      <figure class="image is-64x64">
+        <img class="is-rounded" src="https://via.placeholder.com/128x128.png?text=Image">
+      </figure>
+    </div>
+
+    <div class="list-item-content">
+      <div class="list-item-title">Very long titles will also have overflow hidden if they are wider than the container</div>
+      <div class="list-item-description">A very long description can have an ellipsis overflow if you want the text to remain all on a single line without wrapping</div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
 {% capture list_item_hidden_images %}
 <div class="list has-hidden-images">
   <div class="list-item">
@@ -511,6 +554,14 @@ meta:
 </div>
 
 {% include elements/snippet.html content=list_item_overflow_ellipsis more=true %}
+
+<div class="content">
+  <p>
+    Sometimes you might want to control the truncation <strong>length</strong>. For that a custom property can be set on the element using an inline style tag <code>style="--length: 25"</code>. The length uses the <code>ch</code> unit resulting in a width roughly equivalent to the value in characters.
+  </p>
+</div>
+
+{% include elements/snippet.html content=list_item_overflow_ellipsis_length more=true %}
 
 <div class="content">
   <p>
