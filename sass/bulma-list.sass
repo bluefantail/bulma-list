@@ -21,6 +21,7 @@ $list-item-title-weight: $weight-semibold !default
     background-color: $list-item-hover-color
   &.has-overflow-ellipsis .list-item-content
     min-width: 0
+    max-width: calc(var(--length) * 1ch)
     & > *
       overflow: hidden
       text-overflow: ellipsis
