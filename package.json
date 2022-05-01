@@ -39,6 +39,6 @@
   "scripts": {
     "build": "parcel build build/bulma-list.sass --dist-dir css",
     "build-docs": "parcel build build/bulma-list.sass --dist-dir docs/css",
-    "start-docs": "parcel watch sass/bulma-list.sass --dist-dir docs/css"
+    "start-docs": "parcel watch build/bulma-list.sass --dist-dir docs/css"
   }
 }
