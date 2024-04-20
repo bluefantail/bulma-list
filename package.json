@@ -1,6 +1,6 @@
 {
   "name": "bulma-list",
-  "version": "1.2.0",
+  "version": "2.0.0-beta",
   "author": {
     "name": "Matt Fannin",
     "email": "hello@mattfannin.nz",
@@ -32,13 +32,13 @@
   ],
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "bulma": "^0.9.3",
+    "bulma": "^1.0.0",
     "parcel": "^2.0.0-rc.0",
     "sass": "^1.41.1"
   },
   "scripts": {
-    "build": "parcel build build/bulma-list.sass --dist-dir css",
-    "build-docs": "parcel build build/bulma-list.sass --dist-dir docs/css",
-    "start-docs": "parcel watch build/bulma-list.sass --dist-dir docs/css"
+    "build": "parcel build sass/bulma-list.scss --dist-dir css",
+    "build-docs": "parcel build sass/bulma-list.scss --dist-dir docs/css",
+    "start-docs": "parcel watch sass/bulma-list.scss --dist-dir docs/css"
   }
 }
