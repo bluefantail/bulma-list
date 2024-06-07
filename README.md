@@ -1,5 +1,5 @@
 # bulma-list
-A simple list component extension for [Bulma](https://bulma.io) (requires Bulma v1)).
+A simple list component extension for [Bulma](https://bulma.io) (requires Bulma v1).
 
 The list component is a simple vertical pattern for displaying data related to a single topic. Inspired by similair patterns in [Ant](https://ant.design/components/list), [Material](https://material.io/components/lists), and [Ionic](https://ionicframework.com/docs/api/list).
 
