@@ -1,0 +1,135 @@
+@use "node_modules/bulma/sass/utilities/mixins" as mixins;
+
+@mixin has-mouse-pointer {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+.list {
+  --be-list-color: var(--bulma-text);
+  --be-list-item-description-color: var(--bulma-text-50);
+  --be-list-item-divider-color: var(--bulma-border);
+  --be-list-item-hover-color: var(--bulma-scheme-main-bis);
+  --be-list-item-image-margin: 0.75em;
+  --be-list-item-padding: 0.75em;
+  --be-list-item-title-color: var(--bulma-text-strong);
+  --be-list-item-title-weight: var(--bulma-weight-semibold);
+
+  $list-color: var(--be-list-color) !default;
+  $list-item-description-color: var(--be-list-item-description-color) !default;
+  $list-item-divider-color: var(--be-list-item-divider-color) !default;
+  $list-item-hover-color: var(--be-list-item-hover-color) !default;
+  $list-item-image-margin: var(--be-list-item-image-margin) !default;
+  $list-item-padding: var(--be-list-item-padding) !default;
+  $list-item-title-color: var(--be-list-item-title-color) !default;
+  $list-item-title-weight: var(--be-list-item-title-weight) !default;
+
+  color: $list-color;
+  display: flex;
+  flex-direction: column;
+
+  &.has-hidden-images .list-item-image {
+    display: none;
+  }
+
+  &.has-hoverable-list-items .list-item:hover {
+    background-color: $list-item-hover-color;
+  }
+
+  &.has-overflow-ellipsis .list-item-content {
+    min-width: 0;
+    max-width: calc(var(--length) * 1ch);
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &:not(.has-visible-pointer-controls) .list-item-controls {
+    @include has-mouse-pointer {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .list-item {
+    align-items: center;
+    display: flex;
+    position: relative;
+    transition: background-color ease-out 0.125s;
+
+    &:hover .list-item-controls,
+    &:focus-within .list-item-controls {
+      @include has-mouse-pointer {
+        opacity: initial;
+        visibility: initial;
+      }
+    }
+
+    &:not(.box) {
+      padding: $list-item-padding;
+    }
+
+    &:not(:last-child):not(.box) {
+      border-bottom: 1px solid $list-item-divider-color;
+    }
+
+    @include mixins.mobile {
+      .list:not(.has-overflow-ellipsis) & {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .list-item-image {
+    flex-shrink: 0;
+    margin-right: $list-item-image-margin;
+
+    @include mixins.mobile {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .list-item-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include mixins.mobile {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .list-item-title {
+    color: $list-item-title-color;
+    font-weight: $list-item-title-weight;
+  }
+
+  .list-item-description {
+    color: $list-item-description-color;
+  }
+
+  .list-item-controls {
+    flex-shrink: 0;
+    transition: opacity ease-out 0.125s;
+
+    @include mixins.mobile {
+      padding: 0.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    @include mixins.tablet {
+      padding-left: $list-item-padding;
+      .list:not(.has-visible-pointer-controls) & {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        padding-right: $list-item-padding;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
