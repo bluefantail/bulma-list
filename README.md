@@ -23,7 +23,7 @@ yarn add bulma-list
 
 This puts both the compiled css and the raw sass into the `node_modules` folder.
 
-Depending on your needs you can then import either `css/bulma-list.css` or `sass/bulma-list.sass` into your project after Bulma itself.
+Depending on your needs you can then import either `css/bulma-list.css` or `sass/bulma-list.scss` into your project after Bulma itself.
 
 ## Documentation & examples
 The documentation is built using a copy of Bulma's own Jekyll based system to keep as close as possible to the official style.
