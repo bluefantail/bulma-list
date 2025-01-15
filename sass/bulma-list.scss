@@ -1,4 +1,4 @@
-@use "node_modules/bulma/sass/utilities/mixins" as mixins;
+@use "bulma/sass/utilities/mixins" as mixins;
 
 @mixin has-mouse-pointer {
   @media (hover: hover) {
@@ -38,8 +38,8 @@
   }
 
   &.has-overflow-ellipsis .list-item-content {
-    min-width: 0;
-    max-width: calc(var(--length) * 1ch);
+    min-inline-size: 0;
+    max-inline-size: calc(var(--length) * 1ch);
     & > * {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -69,11 +69,12 @@
     }
 
     &:not(.box) {
-      padding: $list-item-padding;
+      padding-block: $list-item-padding;
+      padding-inline: $list-item-padding;
     }
 
     &:not(:last-child):not(.box) {
-      border-bottom: 1px solid $list-item-divider-color;
+      border-block-end: 1px solid $list-item-divider-color;
     }
 
     @include mixins.mobile {
@@ -85,10 +86,11 @@
 
   .list-item-image {
     flex-shrink: 0;
-    margin-right: $list-item-image-margin;
+    margin-inline-end: $list-item-image-margin;
 
     @include mixins.mobile {
-      padding: 0.5rem 0;
+      padding-block: 0.5rem;
+      padding-inline: 0;
     }
   }
 
@@ -98,7 +100,8 @@
     flex-grow: 1;
 
     @include mixins.mobile {
-      padding: 0.5rem 0;
+      padding-block: 0.5rem;
+      padding-inline: 0;
     }
   }
 
@@ -116,19 +119,20 @@
     transition: opacity ease-out 0.125s;
 
     @include mixins.mobile {
-      padding: 0.5rem 0;
+      padding-block: 0.5rem;
+      padding-inline: 0;
       flex-wrap: wrap;
     }
 
     @include mixins.tablet {
-      padding-left: $list-item-padding;
+      padding-inline-start: $list-item-padding;
       .list:not(.has-visible-pointer-controls) & {
         align-items: center;
         display: flex;
-        height: 100%;
-        padding-right: $list-item-padding;
+        block-size: 100%;
+        padding-block-end: $list-item-padding;
         position: absolute;
-        right: 0;
+        inset-inline-end: 0;
       }
     }
   }
