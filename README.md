@@ -25,7 +25,7 @@ This puts both the compiled css and the raw sass into the `node_modules` folder.
 
 Depending on your needs you can then bring in either `css/bulma-list.css` or `sass/bulma-list.scss` into your project after Bulma itself e.g.
 
-```sass
+```scss
 @use "bulma/sass";
 @use "bulma-list/sass/bulma-list.scss";
 ```
