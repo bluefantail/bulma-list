@@ -31,10 +31,10 @@
     "README.md"
   ],
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "bulma": "^1.0.0",
-    "parcel": "^2.0.0-rc.0",
-    "sass": "^1.41.1"
+    "@parcel/transformer-sass": "^2.13.3",
+    "bulma": "^1.0.3",
+    "parcel": "^2.13.3",
+    "sass": "^1.83.4"
   },
   "scripts": {
     "build": "parcel build sass/bulma-list.scss --dist-dir css",
